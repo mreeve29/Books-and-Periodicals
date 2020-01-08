@@ -23,8 +23,10 @@ public class Book extends Item implements Comparable{
 	}
 
 	@Override
-	public int compareTo(Object o) {
-		if(!(o instanceof Book))return  Integer.MAX_VALUE;
+	public int compareTo(Object o) throws ClassCastException {
+		if(!(o instanceof Book)) {
+			throw new ClassCastException("Cannot cast object to Book");
+		}
 		Book b = (Book)o;
 		
 		return author.compareTo(b.getAuthor());

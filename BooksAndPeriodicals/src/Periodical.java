@@ -23,8 +23,10 @@ public class Periodical extends Item implements Comparable{
 	}
 
 	@Override
-	public int compareTo(Object o) {
-		if(!(o instanceof Periodical))return  Integer.MAX_VALUE;
+	public int compareTo(Object o) throws ClassCastException{
+		if(!(o instanceof Periodical)){
+			throw new ClassCastException("Cannot cast object to Periodial");
+		}
 		Periodical p = (Periodical)o;
 		
 		return issueNumber - p.getIssueNumber();
