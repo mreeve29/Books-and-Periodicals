@@ -25,7 +25,7 @@ public class Periodical extends Item implements Comparable{
 	@Override
 	public int compareTo(Object o) throws ClassCastException{
 		if(!(o instanceof Periodical)){
-			throw new ClassCastException("Cannot cast object to Periodial");
+			throw new ClassCastException("Cannot cast object to Periodical");
 		}
 		Periodical p = (Periodical)o;
 		

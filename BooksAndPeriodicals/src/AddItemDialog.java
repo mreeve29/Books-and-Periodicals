@@ -68,13 +68,13 @@ public class AddItemDialog extends GBDialog{
 
 		@Override
 		public void stateChanged(ChangeEvent e) {
-			if(e.getSource().equals(bookButton)) {
+			if(e.getSource().equals(bookButton) && bookButton.isSelected()) {
 				//show book elements
 				periodicalNumberLabel.setVisible(false);
 				periodicalNumberField.setVisible(false);
 				bookAuthorLabel.setVisible(true);
 				bookAuthorField.setVisible(true);
-			}else {
+			}else if(e.getSource().equals(periodicalButton) && periodicalButton.isSelected()) {
 				//show periodical elements
 				periodicalNumberLabel.setVisible(true);
 				periodicalNumberField.setVisible(true);

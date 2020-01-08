@@ -1,4 +1,7 @@
 import BreezySwing.*;
+
+import java.util.Collections;
+
 import javax.swing.*;
 
 public class BookAndPeriodicalsGUI extends GBFrame{
@@ -6,13 +9,16 @@ public class BookAndPeriodicalsGUI extends GBFrame{
 	private Library lib = new Library();
 
 	private JButton addItemButton = addButton("Add Item",1,1,1,1);
-	private JButton printAllButton = addButton("Print All",2,1,1,1);
+	private JButton printSortedBooksButton = addButton("Print Sorted Books",2,1,1,1);
+	private JButton printAllButton = addButton("Print All",3,1,1,1);
 	
 	
 	public void buttonClicked(JButton button) {
 		if(button == addItemButton) {
 			new AddItemDialog(this, lib);
-		}else if(button == printAllButton) {
+		}else if(button == printSortedBooksButton){
+			new OutputDialog(this, lib.getItems(), "Sorted:", "Sorted List");
+		}else  if(button == printAllButton) {
 			new OutputDialog(this,lib.getItems(),"All Items:","All Items");
 		}
 	}
