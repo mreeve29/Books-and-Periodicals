@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Library {
 	
 	//class objects
-	private ArrayList<Item> items = new ArrayList<Item>(); //holds all books
+	private ArrayList<Item> items = new ArrayList<Item>(); //holds all items
 	
 	public void addItem(Item i) {
 		items.add(i);

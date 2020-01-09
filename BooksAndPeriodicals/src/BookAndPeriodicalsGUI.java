@@ -9,28 +9,19 @@ public class BookAndPeriodicalsGUI extends GBFrame{
 	private Library lib = new Library();
 
 	private JButton addItemButton = addButton("Add Item",1,1,1,1);
-	private JButton printSortedBooksButton = addButton("Print Sorted Books",2,1,1,1);
-	private JButton printAllButton = addButton("Print All",3,1,1,1);
+	private JButton compareButton = addButton("Compare Items",3,1,1,1);
 	
 	
 	public void buttonClicked(JButton button) {
 		if(button == addItemButton) {
 			new AddItemDialog(this, lib);
-		}else if(button == printSortedBooksButton){
-			new OutputDialog(this, lib.getItems(), "Sorted:", "Sorted List");
-		}else  if(button == printAllButton) {
-			new OutputDialog(this,lib.getItems(),"All Items:","All Items");
+		}else  if(button == compareButton) {
+			new ItemCompareDialog(this,lib);
 		}
 	}
 	
 	public static void main(String[] args) {
 		BookAndPeriodicalsGUI frm = new BookAndPeriodicalsGUI();
-		
-		Item book1 = new Book("Dictionary", "Webster");
-		Item Magazine1  = new Periodical("Sports Illustrated", 345);
-
-		System.out.println(book1.print());
-		System.out.println(Magazine1.print());
 		
 	}
 	
