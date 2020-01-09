@@ -16,5 +16,7 @@ public abstract class Item implements Comparable{
 	
 	public abstract String print();
 	
+	public abstract String info();
+	
 	public abstract int compareTo(Object o);
 }

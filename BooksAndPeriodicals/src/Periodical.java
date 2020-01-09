@@ -32,5 +32,10 @@ public class Periodical extends Item implements Comparable{
 		return issueNumber - p.getIssueNumber();
 		
 	}
+	
+	@Override
+	public String info() {
+		return getName() +  " - " + issueNumber;
+	}
 
 }

@@ -32,4 +32,9 @@ public class Book extends Item implements Comparable{
 		return author.compareTo(b.getAuthor());
 	}
 
+	@Override
+	public String info() {
+		return getName() +  " - " + author;
+	}
+
 }

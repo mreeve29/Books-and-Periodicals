@@ -22,7 +22,6 @@ public class BookAndPeriodicalsGUI extends GBFrame{
 	
 	public static void main(String[] args) {
 		BookAndPeriodicalsGUI frm = new BookAndPeriodicalsGUI();
-		
 	}
 	
 	public BookAndPeriodicalsGUI() {

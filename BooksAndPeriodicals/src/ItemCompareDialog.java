@@ -21,7 +21,7 @@ public class ItemCompareDialog extends GBDialog{
 	private JLabel equalsLabel = addLabel("Items that equal:",1,4,1,1);
 	private JTextArea itemEqualsArea = addTextArea("",2,4,1,1);
 	
-	private JButton closeButton = addButton("Close",3,2,1,1);
+	private JButton closeButton = addButton("Close",3,4,1,1);
 	
 	private Item selected;
 	
@@ -57,7 +57,7 @@ public class ItemCompareDialog extends GBDialog{
 	private void populateList() {
 		if(lib.getItems().size() == 0)return;
 		for(Item i : lib.getItems()) {
-			addItemToList(i.getName());
+			addItemToList(i.info());
 		}
 	}
 	
