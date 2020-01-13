@@ -1,5 +1,5 @@
 
-public class Periodical extends Item implements Comparable{
+public class Periodical extends Item{
 
 	private int issueNumber;
 	
@@ -23,7 +23,7 @@ public class Periodical extends Item implements Comparable{
 	}
 
 	@Override
-	public int compareTo(Object o) throws ClassCastException{
+	public int compareTo(Item o) throws ClassCastException{
 		if(!(o instanceof Periodical)){
 			throw new ClassCastException("Cannot cast object to Periodical");
 		}

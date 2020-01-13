@@ -1,5 +1,5 @@
 
-public class Book extends Item implements Comparable{
+public class Book extends Item{
 
 	private String author;
 	
@@ -23,7 +23,7 @@ public class Book extends Item implements Comparable{
 	}
 
 	@Override
-	public int compareTo(Object o) throws ClassCastException {
+	public int compareTo(Item o) throws ClassCastException {
 		if(!(o instanceof Book)) {
 			throw new ClassCastException("Cannot cast object to Book");
 		}

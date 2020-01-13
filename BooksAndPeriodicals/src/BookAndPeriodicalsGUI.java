@@ -9,12 +9,15 @@ public class BookAndPeriodicalsGUI extends GBFrame{
 	private Library lib = new Library();
 
 	private JButton addItemButton = addButton("Add Item",1,1,1,1);
+	private JButton printItemsButton = addButton("Print Items",2,1,1,1);
 	private JButton compareButton = addButton("Compare Items",3,1,1,1);
 	
 	
 	public void buttonClicked(JButton button) {
 		if(button == addItemButton) {
 			new AddItemDialog(this, lib);
+		}else if (button == printItemsButton){
+			new OutputDialog(this,lib.getItems(),"All Items:","All Items");
 		}else  if(button == compareButton) {
 			new ItemCompareDialog(this,lib);
 		}

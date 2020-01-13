@@ -1,5 +1,5 @@
 
-public abstract class Item implements Comparable{
+public abstract class Item implements Comparable<Item>{
 	private String name;
 	
 	public Item(String str) {
@@ -18,5 +18,5 @@ public abstract class Item implements Comparable{
 	
 	public abstract String info();
 	
-	public abstract int compareTo(Object o);
+	public abstract int compareTo(Item o);
 }

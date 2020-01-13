@@ -52,7 +52,7 @@ public class ItemCompareDialog extends GBDialog{
 		this.setSize(800,500);
 		this.setVisible(true);
 	}
-
+ 
 	//adds items to list
 	private void populateList() {
 		if(lib.getItems().size() == 0)return;
