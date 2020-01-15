@@ -34,7 +34,7 @@ public class Book extends Item{
 		}
 		Book b = (Book)o;
 		
-		return b.getAuthor().compareTo(author);
+		return b.getAuthor().toLowerCase().compareTo(author.toLowerCase());
 	}
 
 	@Override
