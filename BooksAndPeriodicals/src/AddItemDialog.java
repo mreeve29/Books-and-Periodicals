@@ -14,8 +14,6 @@ public class AddItemDialog extends GBDialog{
 	private JRadioButton bookButton = addRadioButton("Book",1,1,1,1);
 	private JRadioButton periodicalButton = addRadioButton("Periodical",1,2,1,1);
 	
-	
-	
 	@SuppressWarnings("unused")
 	private JLabel titleLabel = addLabel("Title:",2,1,1,1);
 	private JTextField titleField = addTextField("",2,2,1,1);
@@ -31,6 +29,7 @@ public class AddItemDialog extends GBDialog{
 	
 	private Library lib;
 	
+	//button event listener
 	public void buttonClicked(JButton button) {
 		if(button == enterButton) {
 			String title = titleField.getText();
@@ -64,6 +63,7 @@ public class AddItemDialog extends GBDialog{
 		}
 	}
 	
+	//used to hide and show elements based on what type of item is being added
 	private ChangeListener cl = new ChangeListener() {
 
 		@Override

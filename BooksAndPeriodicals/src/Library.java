@@ -21,8 +21,4 @@ public class Library {
 		return items;
 	}
 	
-	
-	//constructor
-	public Library() {
-	}
 }

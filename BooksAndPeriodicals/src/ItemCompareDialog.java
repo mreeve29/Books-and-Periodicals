@@ -25,6 +25,7 @@ public class ItemCompareDialog extends GBDialog{
 	
 	private Item selected;
 	
+	//button event listener
 	public void buttonClicked(JButton button) {
 		if(button == closeButton) {
 			dispose();
@@ -78,22 +79,29 @@ public class ItemCompareDialog extends GBDialog{
 		compare();
 	}
 	
+	//compare items
 	private void compare() {
+		//reset text areas
 		itemBeforeArea.setText("");
 		itemAfterArea.setText("");
 		itemEqualsArea.setText("");
+		
 		for(Item i : lib.getItems()) {
+			//skip same item as selected
 			if(i == selected)continue;
 			int compare;
+			
+			//if type of class does not match skip
 			try {
 				compare = selected.compareTo(i);
 			}catch (ClassCastException e){
 				continue;
 			}
-			if(compare > 0) {
+			
+			if(compare < 0) {
 				//add to before
 				itemBeforeArea.append(i.print() + "\n\n");
-			}else if (compare < 0) {
+			}else if (compare > 0) {
 				//add to after
 				itemAfterArea.append(i.print() + "\n\n");
 			}else {
